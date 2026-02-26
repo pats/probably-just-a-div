@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 — DOM Search</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>User directory</h1>
+
+      <label for="search">Search</label>
+      <input
+        id="search"
+        type="search"
+        placeholder="Type to filter…"
+        autocomplete="off"
+      />
+
+      <ul id="user-list" role="list"></ul>
+    </main>
+
+    <script type="module" src="src/index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+/* ─────────────────────────────────────────────
+   Task 02 — CSS Skeleton Loader
+   Edit this file AND index.html (aria only).
+   ───────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  padding: 2rem;
+}
+
+h1 {
+  margin-block-end: 1.5rem;
+  font-size: 1.75rem;
+}
+
+/* .card ─────────────────────────────────────
+   Base card used by both real card and skeleton.
+   White background, padding, border-radius, shadow.
+   Avatar and body sit side by side (flex row).
+*/
+
+/* .card__avatar ─────────────────────────────
+   Circular image, 56x56
+*/
+
+/* .skeleton ─────────────────────────────────
+   Requirements:
+   - Grey base color
+   - Shimmer animation (gradient sweeping left → right)
+   - .skeleton--avatar: 56x56 circle
+   - .skeleton--line: full width, height ~1rem, border-radius
+   - .skeleton--line-short: 40% width
+   - .skeleton--line-medium: 70% width
+
+   Animation must be disabled when the user has
+   requested reduced motion (prefers-reduced-motion: reduce).
+   A static grey block is acceptable in that case.
+*/
+
+/* TODO */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 — CSS Skeleton</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Loading state</h1>
+
+      <!-- This is the real card — shown after data loads -->
+      <article class="card" hidden>
+        <img class="card__avatar" src="https://placehold.co/56x56" alt="Jane Doe" />
+        <div class="card__body">
+          <strong class="card__name">Jane Doe</strong>
+          <p class="card__bio">
+            Senior frontend engineer. Occasional speaker. Strong opinions, loosely held.
+          </p>
+        </div>
+      </article>
+
+      <!-- This is the skeleton — shown while data is loading -->
+      <!-- aria attributes are intentionally missing — that is part of the task -->
+      <div class="card card--skeleton">
+        <div class="skeleton skeleton--avatar"></div>
+        <div class="card__body">
+          <div class="skeleton skeleton--line skeleton--line-short"></div>
+          <div class="skeleton skeleton--line"></div>
+          <div class="skeleton skeleton--line skeleton--line-medium"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
