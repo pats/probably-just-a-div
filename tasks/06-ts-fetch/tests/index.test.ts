@@ -41,7 +41,7 @@ describe("apiFetch — success", () => {
 
 describe("apiFetch — HTTP errors", () => {
   it("returns ok: false on 404", async () => {
-    mockFetch(404, { message: "Not found" }, "Not Found");
+    mockFetch(404, {}, "Not Found");
     const result = await apiFetch("/api/missing");
     expect(result.ok).toBe(false);
     if (!result.ok) {
@@ -49,37 +49,12 @@ describe("apiFetch — HTTP errors", () => {
     }
   });
 
-  it("uses message from JSON body when available", async () => {
-    mockFetch(422, { message: "Validation failed" }, "Unprocessable Entity");
-    const result = await apiFetch("/api/submit");
-    expect(result.ok).toBe(false);
-    if (!result.ok) {
-      expect(result.error.message).toBe("Validation failed");
-    }
-  });
-
-  it("falls back to statusText when JSON has no message", async () => {
-    mockFetch(500, { code: "INTERNAL" }, "Internal Server Error");
+  it("uses statusText as the error message", async () => {
+    mockFetch(500, {}, "Internal Server Error");
     const result = await apiFetch("/api/boom");
     expect(result.ok).toBe(false);
     if (!result.ok) {
       expect(result.error.message).toBe("Internal Server Error");
-    }
-  });
-});
-
-// ── Network failure ──────────────────────────
-
-describe("apiFetch — network failure", () => {
-  it("returns ok: false with status 0 when fetch throws", async () => {
-    vi.spyOn(globalThis, "fetch").mockRejectedValue(new TypeError("Failed to fetch"));
-
-    const result = await apiFetch("/api/offline");
-
-    expect(result.ok).toBe(false);
-    if (!result.ok) {
-      expect(result.error.status).toBe(0);
-      expect(result.error.message).toBeTruthy();
     }
   });
 });

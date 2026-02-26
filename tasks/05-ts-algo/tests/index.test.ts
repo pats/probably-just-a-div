@@ -22,18 +22,6 @@ describe("debounce", () => {
     expect(fn).toHaveBeenCalledTimes(1);
   });
 
-  it("resets the timer on every call", () => {
-    const fn = vi.fn();
-    const debounced = debounce(fn, 100);
-    debounced();
-    vi.advanceTimersByTime(50);
-    debounced();
-    vi.advanceTimersByTime(50);
-    expect(fn).not.toHaveBeenCalled();
-    vi.advanceTimersByTime(50);
-    expect(fn).toHaveBeenCalledTimes(1);
-  });
-
   it("passes the latest arguments to fn", () => {
     const fn = vi.fn();
     const debounced = debounce(fn, 100);

@@ -26,11 +26,8 @@ export type ApiResult<T> = { ok: true; data: T } | { ok: false; error: ApiError 
  * Requirements:
  * 1. Parse the response body as JSON.
  * 2. If the HTTP status is not 2xx, return ok: false with the status code
- *    and an error message. Try to read `message` from the JSON body first;
- *    fall back to the HTTP status text.
- * 3. If the network request itself throws (offline, CORS, etc.),
- *    return ok: false with status 0 and the error message.
- * 4. The caller supplies the expected shape via the generic parameter T.
+ *    and the HTTP status text as the error message.
+ * 3. The caller supplies the expected shape via the generic parameter T.
  *    Trust it — no runtime schema validation is required.
  *
  * @example

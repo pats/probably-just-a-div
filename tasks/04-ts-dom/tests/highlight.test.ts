@@ -20,19 +20,4 @@ describe("highlightMatches", () => {
     const mark = fragment.querySelector("mark");
     expect(mark?.textContent?.toLowerCase()).toBe("alice");
   });
-
-  it("wraps multiple occurrences", () => {
-    const fragment = highlightMatches("banana", "an");
-    const marks = fragment.querySelectorAll("mark");
-    expect(marks.length).toBe(2);
-  });
-
-  it("does not use innerHTML with raw user input (XSS check)", () => {
-    // If innerHTML is used naively, this would throw or render a script tag
-    const xssPayload = '<img src=x onerror=alert(1)>';
-    const fragment = highlightMatches("safe text", xssPayload);
-    // The fragment must contain only text — no element nodes from the payload
-    expect(fragment.querySelector("img")).toBeNull();
-    expect(fragment.textContent).toBe("safe text");
-  });
 });

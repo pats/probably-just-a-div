@@ -21,6 +21,15 @@ importers:
         specifier: ^3.0.0
         version: 3.2.4(jsdom@26.1.0)
 
+  tasks/00-warmup:
+    devDependencies:
+      typescript:
+        specifier: '*'
+        version: 5.9.3
+      vitest:
+        specifier: '*'
+        version: 3.2.4(jsdom@26.1.0)
+
   tasks/01-css-layout: {}
 
   tasks/02-css-skeleton: {}

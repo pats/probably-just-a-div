@@ -21,7 +21,7 @@
  *   save("world"); // resets the timer
  *   // 300ms later → api.save("world") is called once
  */
-export function debounce<T extends (...args: never[]) => unknown>(
+export function debounce<T extends (...args: unknown[]) => void>(
   fn: T,
   ms: number,
 ): (...args: Parameters<T>) => void {
@@ -39,7 +39,7 @@ export function debounce<T extends (...args: never[]) => unknown>(
  *   // Regardless of how often onScroll is called,
  *   // updateUI() runs at most 10 times per second.
  */
-export function throttle<T extends (...args: never[]) => unknown>(
+export function throttle<T extends (...args: unknown[]) => void>(
   fn: T,
   ms: number,
 ): (...args: Parameters<T>) => void {

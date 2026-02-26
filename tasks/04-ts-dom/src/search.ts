@@ -2,19 +2,17 @@ import type { User } from "./data.js";
 
 // ─────────────────────────────────────────────
 // Task 04 — DOM Search with Highlight
-// Implement the two functions below.
+// Implement the functions below.
 //
 // Rules:
-//   - Do NOT use innerHTML with the raw user query.
-//   - Do not modify tests/ or data.ts.
+//   - Do not modify tests/.
 // ─────────────────────────────────────────────
 
 /**
- * Returns a DocumentFragment containing the text with every occurrence
+ * Returns a DocumentFragment containing the text with the first occurrence
  * of `query` wrapped in a <mark> element.
  * Matching must be case-insensitive.
- *
- * IMPORTANT: Do NOT use innerHTML with unsanitised user input.
+ * Returns a plain text node when `query` is empty.
  *
  * @example
  *   highlightMatches("Alice Nowak", "ali")
@@ -28,10 +26,10 @@ export function highlightMatches(text: string, query: string): DocumentFragment 
 }
 
 /**
- * Renders `users` into `container`, highlighting `query` in each user's name.
- * Each list item must contain the user's name (with highlight) and department.
- * Clears the container before rendering.
+ * Bonus: Renders `users` into `container`, highlighting `query` in each
+ * user's name. Each list item must show the user's name (with highlight)
+ * and department. Clears the container before rendering.
  */
 export function renderList(container: HTMLUListElement, users: User[], query: string): void {
-  // TODO
+  // TODO (bonus)
 }
