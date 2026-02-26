@@ -28,12 +28,29 @@ type ApiResult<T> =
 
 ### Error handling rules
 
-| Situation | `ok` | `status` | `message` |
-|---|---|---|---|
-| HTTP 2xx | `true` | — | — |
-| HTTP non-2xx, JSON has `message` | `false` | HTTP status | value of `body.message` |
-| HTTP non-2xx, no `message` in JSON | `false` | HTTP status | HTTP `statusText` |
-| `fetch` throws (network error, CORS…) | `false` | `0` | error message |
+| Situation    | `ok`    | `status`    | `message`        |
+|--------------|---------|-------------|------------------|
+| HTTP 2xx     | `true`  | —           | —                |
+| HTTP non-2xx | `false` | HTTP status | HTTP `statusText` |
+
+## Try it out
+
+Use [JSONPlaceholder](https://jsonplaceholder.typicode.com) — a free, no-auth public REST API:
+
+```ts
+interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+// success
+const ok = await apiFetch<Todo>("https://jsonplaceholder.typicode.com/todos/1");
+
+// 404
+const err = await apiFetch("https://jsonplaceholder.typicode.com/todos/99999");
+```
 
 ## Rules
 
@@ -50,6 +67,5 @@ pnpm test
 ## What we look at
 
 - Discriminated union pattern — correct narrowing in caller code
-- All four error paths handled
 - Clean async/await with proper error boundaries
 - No accidental `any` in the generic plumbing
