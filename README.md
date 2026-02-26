@@ -14,13 +14,13 @@ Work through them in any order. Each task is self-contained.
 
 | # | Folder | Topic | Time |
 |---|---|---|---|
-| 00 | `tasks/00-warmup` | JS fundamentals quiz — equality, `typeof`, hoisting, closures, event loop | ~5 min |
-| 01 | `tasks/01-css-layout` | CSS Grid — responsive layout without media queries | ~10 min |
-| 02 | `tasks/02-css-skeleton` | CSS skeleton loader + accessibility + reduced motion | ~10 min |
-| 03 | `tasks/03-ts-types` | TypeScript type utility (`PickByValue`) | ~10 min |
-| 04 | `tasks/04-ts-dom` | DOM search with text highlight | ~12 min |
-| 05 | `tasks/05-ts-algo` | `debounce` & `throttle` with preserved TypeScript types | ~12 min |
-| 06 | `tasks/06-ts-fetch` | Typed `fetch` wrapper — discriminated union, no throws | ~12 min |
+| 00 | [`tasks/00-warmup`](tasks/00-warmup/README.md) | JS fundamentals quiz — equality, `typeof`, hoisting, closures, event loop | ~5 min |
+| 01 | [`tasks/01-css-layout`](tasks/01-css-layout/README.md) | CSS Grid — responsive layout without media queries | ~10 min |
+| 02 | [`tasks/02-css-skeleton`](tasks/02-css-skeleton/README.md) | CSS skeleton loader + accessibility + reduced motion | ~10 min |
+| 03 | [`tasks/03-ts-types`](tasks/03-ts-types/README.md) | TypeScript type utility (`PickByValue`) | ~10 min |
+| 04 | [`tasks/04-ts-dom`](tasks/04-ts-dom/README.md) | DOM search with text highlight | ~12 min |
+| 05 | [`tasks/05-ts-algo`](tasks/05-ts-algo/README.md) | `debounce` & `throttle` with preserved TypeScript types | ~12 min |
+| 06 | [`tasks/06-ts-fetch`](tasks/06-ts-fetch/README.md) | Typed `fetch` wrapper — discriminated union, no throws | ~12 min |
 
 ## Rules
 
