@@ -28,3 +28,10 @@ export const example: number = 2;
 ```sh
 pnpm test
 ```
+
+## What we look at
+
+- Knowledge of JS coercion rules and `==` / `===` semantics
+- Awareness of `typeof` quirks (`null`, `NaN`)
+- Understanding of `var` hoisting and closure mechanics
+- Familiarity with the event loop (microtask vs macrotask order)

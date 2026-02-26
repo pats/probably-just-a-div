@@ -27,6 +27,11 @@ Already wired up in `src/index.ts`. If you have time, implement it in `src/searc
 to see the live demo in the browser: renders each user as a `<li>` with their
 highlighted name and department.
 
+## Rules
+
+- No `innerHTML` with unsanitised strings
+- Do not modify `tests/`, `src/data.ts`, or `src/index.ts`
+
 ## Run tests
 
 ```sh
