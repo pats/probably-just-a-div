@@ -14,10 +14,11 @@ Work through them in any order. Each task is self-contained.
 
 | # | Folder | Topic | Time |
 |---|---|---|---|
+| 00 | `tasks/00-warmup` | JS fundamentals quiz — equality, `typeof`, hoisting, closures, event loop | ~5 min |
 | 01 | `tasks/01-css-layout` | CSS Grid — responsive layout without media queries | ~10 min |
 | 02 | `tasks/02-css-skeleton` | CSS skeleton loader + accessibility + reduced motion | ~10 min |
-| 03 | `tasks/03-ts-types` | TypeScript type utilities (`DeepReadonly`, `PickByValue`) | ~12 min |
-| 04 | `tasks/04-ts-dom` | DOM search with text highlight, no innerHTML | ~12 min |
+| 03 | `tasks/03-ts-types` | TypeScript type utility (`PickByValue`) | ~10 min |
+| 04 | `tasks/04-ts-dom` | DOM search with text highlight | ~12 min |
 | 05 | `tasks/05-ts-algo` | `debounce` & `throttle` with preserved TypeScript types | ~12 min |
 | 06 | `tasks/06-ts-fetch` | Typed `fetch` wrapper — discriminated union, no throws | ~12 min |
 
