@@ -1,0 +1,13 @@
+{
+  "name": "@challenge/06-ts-fetch",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "vitest": "*"
+  }
+}
