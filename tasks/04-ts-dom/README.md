@@ -5,29 +5,27 @@
 
 ## Task
 
-Implement a live search that filters a user list and highlights matching text.
+Implement `highlightMatches` in `src/search.ts`.
 
 ### `highlightMatches(text, query)`
 
-Returns a `DocumentFragment` with every occurrence of `query` (case-insensitive)
-wrapped in a `<mark>` element. The rest of the text is plain `Text` nodes.
+Returns a `DocumentFragment` with the first occurrence of `query` (case-insensitive)
+wrapped in a `<mark>` element. The surrounding text is plain `Text` nodes.
+Returns a plain text node when `query` is empty.
 
 ```
 highlightMatches("Alice Nowak", "ali")
 → [<mark>Ali</mark>, "ce Nowak"]
+
+highlightMatches("Alice Nowak", "")
+→ ["Alice Nowak"]
 ```
 
-**Important:** Do **not** build the result using `innerHTML` with the raw user query.
+### `renderList(container, users, query)` — bonus
 
-### `renderList(users, query)`
-
-Renders each user as a `<li>` containing their highlighted name and department.
-Clears the list before each render.
-
-### Event wiring
-
-Already done in `src/index.ts` — do not modify it.
-Focus entirely on `src/search.ts`.
+Already wired up in `src/index.ts`. If you have time, implement it in `src/search.ts`
+to see the live demo in the browser: renders each user as a `<li>` with their
+highlighted name and department.
 
 ## Run tests
 
@@ -37,6 +35,6 @@ pnpm test
 
 ## What we look at
 
-- `DocumentFragment` + `Text` nodes + `createElement` — no `innerHTML` shortcut
-- XSS awareness — the test explicitly checks for it
+- `DocumentFragment` + `Text` nodes + `createElement`
+- Correct case-insensitive matching
 - Clean, readable DOM manipulation
